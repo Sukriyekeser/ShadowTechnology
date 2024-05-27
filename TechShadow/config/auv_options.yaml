@@ -1,0 +1,40 @@
+version: 1
+
+auv_config:
+  motors:
+    - id: 1
+      name: "Motor 1"
+      max_speed: 100
+    - id: 2
+      name: "Motor 2"
+      max_speed: 100
+    - id: 3
+      name: "Motor 3"
+      max_speed: 100
+    - id: 4
+      name: "Motor 4"
+      max_speed: 100
+    - id: 5
+      name: "Motor 5"
+      max_speed: 100
+    - id: 6
+      name: "Motor 6"
+      max_speed: 100
+  sensors:
+    depth:
+      model: ".."
+      max_depth: 100
+    # ....
+  camera:
+    resolution: "1920x1080"
+    fps: 30
+
+# Gibi gibi ...
+
+motor_ayarlari:
+  hiz_limiti: 100
+  ivme: 5
+
+sensör_ayarlari:
+  derinlik_hassasiyeti: 0.1
+  basinc_hassasiyeti: 0.01

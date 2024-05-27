@@ -1,0 +1,12 @@
+pyShadow/*
+
+__pycache__/
+
+.vscode/*
+
+model/*
+
+*.jpg
+*.jpeg
+*.png
+*.gif

@@ -1,0 +1,14 @@
+[Unit]
+Description=TechShadow AUV Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/TechShadow/main.py
+WorkingDirectory=/home/TechShadow
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=TechShadow
+
+[Install]
+WantedBy=multi-user.target

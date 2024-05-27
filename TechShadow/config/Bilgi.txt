@@ -1,0 +1,1 @@
+Ön tanımlı veriler ve ayarlar burada, hangi modül ile alakalı ise kendine ait dosyası ile belirlenecek

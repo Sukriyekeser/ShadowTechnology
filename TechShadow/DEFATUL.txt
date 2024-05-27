@@ -1,0 +1,49 @@
+Sanal Ortam Oluşturma Ve Geçiş
+
+    $ python -m venv pyShadow
+
+    $ pyShadow\Scripts\activate
+
+Sanal Ortamı Kapatma
+
+    $ deactivate
+
+Sanal Ortamda Paket Bağımlılıkları Kurma
+
+    (pyShadow) $ pip install -r requirements.txt
+
+[ requirements.txt ] Güncellenmesi
+
+    $ pip freeze > requirements.txt
+
+Proje Bağımlılıklarını Listeleme
+
+    $ pip list
+    $ pip freeze
+
+-------------------------------------------------------------------------
+
+PROJEYİ SERVİSE EKLEME
+
+$ /etc/systemd/system/techShadow.service
+
+$ sudo nano /etc/systemd/system/techShadow.service
+
+[Unit]
+Description=TechShadow Python Script Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/TechShadow/script.py
+WorkingDirectory=/home/TechShadow
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=TechShadow
+
+[Install]
+WantedBy=multi-user.target
+
+$ sudo systemctl enable techShadow.service
+
+$ sudo systemctl start techShadow.service
